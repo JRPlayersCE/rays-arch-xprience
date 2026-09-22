@@ -1,5 +1,5 @@
-cp -r ~/.config .config
-cp -r ~/.local/share/ .local/share/
-cp -r ~/.icons .icons
+cp -r .rice/.config/ ~/.config
+cp -r .rice/.local/ ~/.local
+cp -r .rice/.icons/ ~/.icons
 echo "Rice updated!."
 
