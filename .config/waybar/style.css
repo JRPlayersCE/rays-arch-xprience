@@ -1,0 +1,120 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0;
+}
+
+/* Barra sólida de ponta a ponta no topo */
+window#waybar {
+    background-color: @bg0;
+    color: @fg;
+    border-bottom: 2px solid @bg2;
+}
+
+/* Reset de margens e bordas dos módulos */
+#workspaces #window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#tray,
+#custom-power {
+    background-color: transparent;
+    padding: 4px 10px;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 6px;
+    color: @bg3;
+}
+
+#workspaces button.active {
+    color: @green;
+}
+
+#workspaces button:hover {
+    background-color: @bg1;
+    color: @fg;
+}
+
+/* Espaçamento interno dos ícones na Tray */
+#tray {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* Cores dos módulos */
+#clock {
+    color: @green;
+}
+
+#battery {
+    color: @yellow;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @orange;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+}
+
+#cpu {
+    color: @blue;
+}
+
+#memory {
+    color: @purple;
+    padding: 0 8px;
+}
+
+#network {
+    color: @aqua;
+}
+
+#pulseaudio {
+    color: @orange;
+}
+
+#pulseaudio.muted {
+    color: @bg3;
+}
+
+#custom-power {
+    color: @red;
+    padding-right: 16px;
+}
+
+#custom-separator {
+    color: @bg3;
+    padding: 0 8px;
+}
+
+#custom-cava {
+    color: @green;
+    padding: 0 6px;
+}
