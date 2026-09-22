@@ -1,5 +1,10 @@
-cp -r .rice/.config/ ~/.config
-cp -r .rice/.local/ ~/.local
-cp -r .rice/.icons/ ~/.icons
-echo "Rice updated!."
+#!/usr/bin/bash
 
+echo 'Ricing, wait...'
+
+cp -f .bashrc ~/.
+cp -rf .config/ ~/.
+cp -rf .local/ ~/.
+cp -rf .icons/ ~/.
+
+echo 'Rice updated!'
