@@ -1,0 +1,12 @@
+{
+    "chat.disableAIFeatures": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Everforest Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "git.autofetch": true,
+    "material-icon-theme.activeIconPack": "react",
+    "material-icon-theme.saturation": 0.5,
+    "material-icon-theme.opacity": 0.85,
+    "material-icon-theme.folders.color": "#8ba48f",
+}
