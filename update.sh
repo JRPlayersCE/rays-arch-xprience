@@ -1,14 +1,19 @@
-#!/usr/bin/bash
+echo "Deleting current rice..."
+rm -rf .rice
+mkdir .rice
 
-echo 'Ricing, wait...'
+echo "Creating cache folder..."
+cd .cache/
+mkdir -p rice
 
-cp -f .rice/.bashrc ~/
-cp -rf .rice/.config/* ~/.config/
+echo "Cloning repo..."
+git clone "https://github.com/JRPlayersCE/my-arch-linux-rice" rice/
 
-rmdir --ignore-fail-on-non-empty ~/.config/hypr/wallpapers
-cp -rf .rice/.config/hypr/wallpapers ~/.config/hypr
+echo "Copying files..."
+cp -rf rice/* ~/.rice/
 
-cp -rf .rice/.local/* ~/.local/
-cp -rfu .rice/.icons/* ~/.icons/
+echo "Deleting cache..."
+rm -rf rice/
 
-echo 'Rice updated!'
+cd ..
+sh .rice/setup.sh
