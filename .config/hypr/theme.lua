@@ -71,7 +71,7 @@ hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 -- Default springs
 hl.curve("easy", { type = "spring", mass = 1, stiffness = 238.1191, dampening = 24.21279333 })
 hl.curve("fast", { type = "spring", mass = 1, stiffness = 500, dampening = 35 })
-hl.curve("pop", { type = "spring", mass = 1, stiffness = 400, dampening = 24.21279333 })
+hl.curve("pop", { type = "spring", mass = 1, stiffness = 500, dampening = 30 })
 
 
 hl.animation({ leaf = "global", enabled = true, speed = 5, spring = "easy" })
