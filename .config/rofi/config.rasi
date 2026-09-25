@@ -1,6 +1,7 @@
 configuration {
     modi:                       "drun,run,filebrowser,window";
     show-icons:                 true;
+    drun-show-actions:          true; /* Mostra as ações dos arquivos .desktop */
     display-drun:               " ";
     display-run:                " ";
     display-filebrowser:        "📁";
@@ -8,10 +9,7 @@ configuration {
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
     font:                       "JetBrainsMono Nerd Font 10";
-    kb-custom-1: 		"Alt-a";
-    drun {
-	show-actions: true;
-    }
+    kb-custom-1:                "Alt+1";
 }
 
 /* --- Paleta Everforest Medium --- */
