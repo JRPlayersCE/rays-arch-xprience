@@ -194,10 +194,10 @@ hl.gesture({
 
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
-hl.device({
+--[[hl.device({
 	name = "epic-mouse-v1",
 	sensitivity = -0.5,
-})
+})]]
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -296,31 +296,6 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
--- Example window rules that are useful
-
-local suppressMaximizeRule = hl.window_rule({
-	-- Ignore maximize requests from all apps. You'll probably like this.
-	name = "suppress-maximize-events",
-	match = { class = ".*" },
-
-	suppress_event = "maximize",
-})
--- suppressMaximizeRule:set_enabled(false)
-
-hl.window_rule({
-	-- Fix some dragging issues with XWayland
-	name = "fix-xwayland-drags",
-	match = {
-		class = "^$",
-		title = "^$",
-		xwayland = true,
-		float = true,
-		fullscreen = false,
-		pin = false,
-	},
-
-	no_focus = true,
-})
 
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
@@ -330,40 +305,9 @@ hl.window_rule({
 -- })
 -- overlayLayerRule:set_enabled(false)
 
--- Hyprland-run windowrule
-hl.window_rule({
-	name = "move-hyprland-run",
-	match = { class = "hyprland-run" },
+require("./window_rules.lua")
 
-	move = "20 monitor_h-120",
-	float = true,
-})
-
-hl.window_rule({
-	name = "flameshot-fix",
-	match = {
-		class = "flameshot",
-	},
-
-	float = true,
-	no_anim = true,
-})
-
-hl.window_rule({
-	name = "pavucontrol-gui",
-	match = {
-		class = "org.pulseaudio.pavucontrol",
-	},
-
-	size = "monitor_w/3 monitor_h /2",
-	float = true,
-})
-
-hl.window_rule({
-	name = "waypaper-good",
-	match = {
-		class = "waypaper",
-	},
-	opacity = 0.8,
-	fullscreen = true,
+hl.workspace_rule({
+	workspace = "special:magic",
+	gaps_out = 50,
 })

@@ -1,4 +1,10 @@
 -- Paleta Everforest (Dark)
+
+hl.env("XCURSOR_THEME", "everforest-cursors")
+hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "everforest-cursors")
+hl.env("HYPRCURSOR_SIZE", "24")
+
 local everforest = {
 	bg_dim = "rgba(1e2326ff)",
 	bg0 = "rgba(272e33ff)",
