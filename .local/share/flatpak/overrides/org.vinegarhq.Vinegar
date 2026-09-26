@@ -1,0 +1,6 @@
+[Context]
+filesystems=host
+unset-environment=XDG_DESKTOP_PORTAL_BACKEND
+
+[Environment]
+XDG_DESKTOP_PORTAL_BACKEND=

@@ -39,13 +39,13 @@ hl.config({
 
 		-- Transparency ajustada para o estilo suave do Everforest
 		active_opacity = 1.0,
-		inactive_opacity = 0.9,
+		inactive_opacity = 0.8,
 
 		shadow = {
 			enabled = true,
-			range = 15,
-			render_power = 3,
-			color = everforest.bg_inactive,
+			range = 20,
+			render_power = 6,
+			color = everforest.shadow,
 		},
 
 		blur = {
@@ -80,8 +80,7 @@ hl.animation({ leaf = "windows", enabled = true, speed = 4.79, spring = "easy" }
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 1, spring = "pop" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1, bezier = "quick" })
 hl.animation({ leaf = "windowsMove", enabled = true, speed = 1, spring = "pop" })
-hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
-hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
+hl.animation({ leaf = "fade", enabled = true, speed = 0.7, bezier = "quick" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
