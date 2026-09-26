@@ -1,5 +1,4 @@
 [Context]
-sockets=inherit-wayland-socket;fallback-x11;!wayland
 filesystems=host
 unset-environment=XDG_DESKTOP_PORTAL_BACKEND
 
