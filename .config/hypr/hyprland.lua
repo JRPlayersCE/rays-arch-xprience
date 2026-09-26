@@ -53,7 +53,6 @@ local system_monitor = root_terminal .. " btop"
 local fileManager = "nautilus"
 local browser = "firefox"
 local menu = "rofi -show drun"
-local flameshot = "flameshot gui"
 local open_waypaper = "killall waypaper; waypaper --zen-mode"
 
 -------------------
@@ -222,7 +221,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(open_waypaper))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind("CTRL + SHIFT + ESCAPE", hl.dsp.exec_cmd(system_monitor))
-hl.bind("CTRL + SHIFT + S", hl.dsp.exec_cmd(flameshot))
+hl.bind("CTRL + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
 hl.bind(mainMod .. " + ALT + R", hl.dsp.exec_cmd("hyprctl reload"))
 
 -- Move focus with mainMod + arrow keys
