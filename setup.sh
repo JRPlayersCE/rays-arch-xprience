@@ -9,4 +9,7 @@ cp -rf .rice/.config/hypr/wallpapers ~/.config/hypr
 cp -rf .rice/.local/* ~/.local/
 sudo cp -rf .rice/.icons/* ~/.icons/
 
+killall waybar
+waybar &
+
 echo 'The Rice is done!'
