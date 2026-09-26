@@ -17,9 +17,5 @@ cava -p ~/.config/cava/config | while read -r line; do
     done
 
     # Se houver som, adiciona o separador na ponta
-    if [ "$has_sound" -eq 1 ]; then
-        echo "${output}  |"
-    else
-        echo ""
-    fi
+    echo "${output}  |"
 done
