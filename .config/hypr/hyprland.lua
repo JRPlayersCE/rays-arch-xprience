@@ -67,7 +67,6 @@ local open_waypaper = "killall waypaper; waypaper --zen-mode"
 hl.on("hyprland.start", function()
 	--hl.exec_cmd(terminal)
 	--hl.exec_cmd("nm-applet")
-	hl.exec_cmd("systemctl --user enable --now mpd")
 	hl.exec_cmd("waypaper --restore")
 	hl.exec_cmd("discord")
 	hl.exec_cmd("waybar")
