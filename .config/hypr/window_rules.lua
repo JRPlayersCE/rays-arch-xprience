@@ -43,9 +43,8 @@ hl.window_rule({
 		class = "flameshot",
 	},
 
-	float = true,
+	fullscreen = true,
 	no_anim = true,
-	pin = true,
 })
 
 hl.window_rule({
@@ -56,7 +55,7 @@ hl.window_rule({
 
 	workspace = "special:mpv",
 	fullscreen = true,
-	opacity = 0.7,
+	opacity = 0.5,
 })
 
 
@@ -75,7 +74,9 @@ hl.window_rule({
 	match = {
 		class = "waypaper",
 	},
-	opacity = 0.8,
-	fullscreen = true,
+
+	workspace = "special:waypaper-gui",
 	pin = true,
+	fullscreen = true,
+	opacity = 0.5,
 })
