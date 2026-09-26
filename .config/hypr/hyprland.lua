@@ -213,6 +213,7 @@ hl.bind(
 	mainMod .. " + M",
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
+
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
@@ -310,4 +311,9 @@ require("./window_rules.lua")
 hl.workspace_rule({
 	workspace = "special:magic",
 	gaps_out = 50,
+})
+
+hl.workspace_rule({
+	workspace = "special:mpv",
+	gaps_out = 0,
 })

@@ -45,7 +45,20 @@ hl.window_rule({
 
 	float = true,
 	no_anim = true,
+	pin = true,
 })
+
+hl.window_rule({
+	name = "mpv-gui",
+	match = {
+		class = "mpv",
+	},
+
+	workspace = "special:mpv",
+	fullscreen = true,
+	opacity = 0.7,
+})
+
 
 hl.window_rule({
 	name = "pavucontrol-gui",
@@ -64,4 +77,5 @@ hl.window_rule({
 	},
 	opacity = 0.8,
 	fullscreen = true,
+	pin = true,
 })
