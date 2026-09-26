@@ -24,7 +24,7 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "discord-workspace",
-	match = {class = "vesktop"},
+	match = {class = "discord"},
 
 	workspace = "special:magic"
 })

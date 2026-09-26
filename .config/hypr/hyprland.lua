@@ -68,7 +68,7 @@ hl.on("hyprland.start", function()
 	--hl.exec_cmd(terminal)
 	--hl.exec_cmd("nm-applet")
 	hl.exec_cmd("waypaper --restore")
-	hl.exec_cmd("flatpak run dev.vencord.Vesktop")
+	hl.exec_cmd("discord")
 	hl.exec_cmd("waybar")
 end)
 
