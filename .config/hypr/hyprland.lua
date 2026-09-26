@@ -341,22 +341,29 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "flameshot-fix",
-	-- Filtros para identificar a janela do Flameshot
 	match = {
 		class = "flameshot",
 	},
-	-- Efeitos necessários para ferramentas de screenshot funcionarem
+
 	float = true,
 	no_anim = true,
 })
 
 hl.window_rule({
+	name = "pavucontrol-gui",
+	match = {
+		class = "org.pulseaudio.pavucontrol",
+	},
+
+	size = "monitor_w/3 monitor_h /2",
+	float = true,
+})
+
+hl.window_rule({
 	name = "waypaper-good",
-	-- Filtros para identificar a janela do Flameshot
 	match = {
 		class = "waypaper",
 	},
-	-- Efeitos necessários para ferramentas de screenshot funcionarem
-	opacity = 0.9,
+	opacity = 0.8,
 	fullscreen = true,
 })
