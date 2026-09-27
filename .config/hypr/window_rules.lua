@@ -56,6 +56,7 @@ hl.window_rule({
 	workspace = "special:mpv",
 	fullscreen = true,
 	opacity = 0.5,
+	no_anim = true,
 })
 
 

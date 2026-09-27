@@ -10,6 +10,6 @@ cp -rf .rice/.local/* ~/.local/
 sudo cp -rf .rice/.icons/* ~/.icons/
 
 killall waybar
-waybar &
+nohup waybar & exit
 
 echo 'The Rice is done!'

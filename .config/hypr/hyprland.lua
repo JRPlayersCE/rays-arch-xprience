@@ -246,6 +246,7 @@ end
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + CTRL + 1", hl.dsp.workspace.toggle_special("mpv"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
@@ -305,8 +306,6 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- })
 -- overlayLayerRule:set_enabled(false)
 
-require("./window_rules.lua")
-
 hl.workspace_rule({
 	workspace = "special:magic",
 	gaps_out = 50,
@@ -314,5 +313,7 @@ hl.workspace_rule({
 
 hl.workspace_rule({
 	workspace = "special:mpv",
-	gaps_out = 0,
+	animation = "fade"
 })
+
+require("./window_rules.lua")
