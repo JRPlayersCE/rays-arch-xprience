@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dict=(" " "▂" "▃" "▄" "▅" "▆" "▇" "█")
+dict=(" " "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
 
 cava -p ~/.config/cava/config | while read -r line; do
     lines=$(echo "$line" | tr ';' ' ')
