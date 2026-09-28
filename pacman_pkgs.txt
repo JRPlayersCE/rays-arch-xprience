@@ -1,0 +1,15 @@
+flatpak
+firefox
+nwg-look
+kitty
+fish
+steam
+rofi
+btop
+nautilus
+yazi
+gnome-disk-utility
+gnome-text-editor
+flameshot
+cava
+mpv
