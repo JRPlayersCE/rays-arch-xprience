@@ -1,3 +1,6 @@
+ttf-jetbrains-mono-nerd
+ttf-nerd-fonts-symbols
+github-cli
 flatpak
 firefox
 nwg-look
@@ -12,4 +15,5 @@ gnome-disk-utility
 gnome-text-editor
 flameshot
 cava
+waybar
 mpv
