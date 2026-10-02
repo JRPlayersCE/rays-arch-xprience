@@ -5,5 +5,3 @@ mkdir .rice
 
 echo "Cloning repo..."
 git clone "https://github.com/JRPlayersCE/my-arch-linux-rice" .rice/
-
-sh .rice/setup.sh
