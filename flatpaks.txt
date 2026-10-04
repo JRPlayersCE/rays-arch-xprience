@@ -1,3 +1,4 @@
 org.vinegarhq.Sober
 org.vinegarhq.Vinegar
 com.github.tchx84.Flatseal
+org.desktop_plus.desktop-plus
