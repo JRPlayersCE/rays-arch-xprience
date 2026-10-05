@@ -1,5 +1,7 @@
+awww
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols
+wl-clipboard
 github-cli
 flatpak
 firefox
