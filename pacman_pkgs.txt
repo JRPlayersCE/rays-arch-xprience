@@ -19,3 +19,6 @@ flameshot
 cava
 waybar
 mpv
+ddcutil
+brightnessctl
+playerctl

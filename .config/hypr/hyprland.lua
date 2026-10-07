@@ -297,6 +297,9 @@ hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "r-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+hl.bind(mainMod .. " + B + prior", hl.dsp.exec_cmd("ddcutil setvcp 10 + 20"))
+hl.bind(mainMod .. " + B + next", hl.dsp.exec_cmd("ddcutil setvcp 10 - 20"))
+
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
 	"XF86AudioRaiseVolume",

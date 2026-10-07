@@ -10,7 +10,7 @@ local everforest = {
 	bg0 = "rgba(272e33ff)",
 	bg1 = "rgba(2e383eff)",
 	bg_inactive = "rgba(4c555baa)", -- Cinza/Verde escuro para bordas inativas
-	shadow = 0xee1e2326, -- Cor de sombra baseada no bg_dim
+	shadow = "rgba(1e2326ee)", -- Cor de sombra baseada no bg_dim
 	green = "rgba(a7c080ee)", -- Cor ativa principal
 	aqua = "rgba(83c092ee)", -- Cor ativa secundária
 	blue = "rgba(7fbbb3ee)",
@@ -41,7 +41,7 @@ hl.config({
 
 	decoration = {
 		rounding = 10,
-		rounding_power = 20,
+		rounding_power = 10,
 
 		-- Transparency ajustada para o estilo suave do Everforest
 		active_opacity = 1.0,
@@ -50,8 +50,14 @@ hl.config({
 		shadow = {
 			enabled = true,
 			range = 20,
-			render_power = 6,
+			render_power = 4,
 			color = everforest.shadow,
+		},
+
+		wobble = {
+			enabled = true,
+			stiffness = 800,
+			damping = 30,
 		},
 
 		motion_blur = {
@@ -61,9 +67,10 @@ hl.config({
 
 		blur = {
 			enabled = true,
-			size = 3,
+			size = 10,
 			passes = 1,
-			vibrancy = 0.1696
+			new_optimizations = true,
+			variant = 8
 		},
 	},
 
