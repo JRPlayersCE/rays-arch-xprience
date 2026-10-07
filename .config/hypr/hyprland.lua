@@ -51,7 +51,7 @@ local root_terminal = "kitty"
 local terminal = root_terminal .. " fish"
 local system_monitor = root_terminal .. " btop"
 local fileManager = "nautilus"
-local browser = "firefox"
+local browser = "helium-browser"
 local menu = "rofi -show drun"
 local open_waypaper = "killall waypaper; waypaper --zen-mode"
 
@@ -236,41 +236,43 @@ hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" 
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
 
-hl.bind(mainMod .. " + SHIFT + tab", function ()
-    local layouts   = { "scrolling", "dwindle", "master", "monocle" }
-    local workspace = hl.get_active_workspace()
-    if hl.get_active_special_workspace() then
-        workspace = hl.get_active_special_workspace()
-    end
+hl.bind(mainMod .. " + SHIFT + tab", function()
+	local layouts = { "scrolling", "dwindle", "master", "monocle" }
+	local workspace = hl.get_active_workspace()
+	if hl.get_active_special_workspace() then
+		workspace = hl.get_active_special_workspace()
+	end
 
-    local next_layout = "dwindle"
+	local next_layout = "dwindle"
 
-    if not workspace then
-        return
-    end
+	if not workspace then
+		return
+	end
 
-    for i = 1, #layouts do
-        if layouts[i] == workspace.tiled_layout then
-            local next_layout_idx = (i % #layouts) + 1
-            next_layout = layouts[next_layout_idx]
-            break
-        end
-    end
+	for i = 1, #layouts do
+		if layouts[i] == workspace.tiled_layout then
+			local next_layout_idx = (i % #layouts) + 1
+			next_layout = layouts[next_layout_idx]
+			break
+		end
+	end
 
-    if workspace.special then
-        hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
-    else
-        hl.workspace_rule({ workspace = "name:" .. tostring(workspace.name), layout = next_layout })
-    end
+	if workspace.special then
+		hl.workspace_rule({ workspace = tostring(workspace.name), layout = next_layout })
+	else
+		hl.workspace_rule({ workspace = "name:" .. tostring(workspace.name), layout = next_layout })
+	end
 end)
 
 hl.bind(mainMod .. " + SPACE", function()
-    local window = hl.get_active_window()
-    if not window then return end
-    hl.dispatch(hl.dsp.window.cycle_next({
-        floating = not window.floating,
-        tiled = window.floating,
-    }))
+	local window = hl.get_active_window()
+	if not window then
+		return
+	end
+	hl.dispatch(hl.dsp.window.cycle_next({
+		floating = not window.floating,
+		tiled = window.floating,
+	}))
 end, { description = "Switch focus between tiled and floating windows" })
 
 -- Switch workspaces with mainMod + [0-9]
@@ -337,7 +339,6 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
-
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
@@ -353,7 +354,7 @@ hl.workspace_rule({
 
 hl.workspace_rule({
 	workspace = "special:mpv",
-	animation = "fade"
+	animation = "fade",
 })
 
 require("./window_rules.lua")
