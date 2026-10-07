@@ -12,5 +12,8 @@
   "material-icon-theme.saturation": 0.5,
   "material-icon-theme.opacity": 0.85,
   "material-icon-theme.folders.color": "#8ba48f",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
+  }
 }
