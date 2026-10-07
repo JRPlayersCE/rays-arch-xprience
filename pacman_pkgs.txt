@@ -4,7 +4,6 @@ ttf-nerd-fonts-symbols
 wl-clipboard
 github-cli
 flatpak
-firefox
 nwg-look
 kitty
 fish
