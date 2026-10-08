@@ -1,5 +1,4 @@
 waypaper
-visual-studio-code-bin
 arronax
 everforest-gtk-theme-git
 everforest-icon-theme-git

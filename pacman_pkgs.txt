@@ -1,3 +1,4 @@
+zed
 awww
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols
