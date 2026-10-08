@@ -54,12 +54,6 @@ hl.config({
 			color = everforest.shadow,
 		},
 
-		wobble = {
-			enabled = true,
-			stiffness = 800,
-			damping = 30,
-		},
-
 		motion_blur = {
 			enabled = true,
 			samples = 3,
@@ -67,10 +61,9 @@ hl.config({
 
 		blur = {
 			enabled = true,
-			size = 10,
+			size = 7,
 			passes = 1,
 			new_optimizations = true,
-			variant = 8
 		},
 	},
 
@@ -91,7 +84,6 @@ hl.curve("easy", { type = "spring", mass = 1, stiffness = 300, dampening = 22 })
 hl.curve("fast", { type = "spring", mass = 1, stiffness = 500, dampening = 35 })
 hl.curve("pop", { type = "spring", mass = 1, stiffness = 500, dampening = 30 })
 hl.curve("special", { type = "spring", mass = 1, stiffness = 700, dampening = 35 })
-
 
 hl.animation({ leaf = "global", enabled = true, speed = 5, spring = "easy" })
 hl.animation({ leaf = "border", enabled = true, speed = 1, spring = "easy" })

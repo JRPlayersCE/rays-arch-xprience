@@ -45,12 +45,10 @@ hl.monitor({
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
-
--- Set programs that you use"
 local root_terminal = "kitty"
 local terminal = root_terminal .. " fish"
 local system_monitor = root_terminal .. " btop"
-local fileManager = "nautilus"
+local fileManager = terminal .. " -C 'y'"
 local browser = "helium-browser"
 local menu = "rofi -show drun"
 local open_waypaper = "killall waypaper; waypaper --zen-mode"
