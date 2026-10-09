@@ -54,6 +54,14 @@ hl.config({
             color = everforest.shadow,
         },
 
+        wobble = {
+            enabled = true,
+            mesh = 2,
+            mass = 2,
+            stiffness = 700,
+            damping = 50,
+        },
+
         motion_blur = {
             enabled = true,
             samples = 3,
@@ -72,31 +80,30 @@ hl.config({
     },
 })
 
--- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
 hl.curve("easeInOutCubic", { type = "bezier", points = { { 0.65, 0.05 }, { 0.36, 1 } } })
 hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
 hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 } } })
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 
--- Default springs
 hl.curve("easy", { type = "spring", mass = 1, stiffness = 300, dampening = 22 })
-hl.curve("fast", { type = "spring", mass = 1, stiffness = 500, dampening = 35 })
+hl.curve("fast", { type = "spring", mass = 1, stiffness = 800, dampening = 40 })
 hl.curve("pop", { type = "spring", mass = 1, stiffness = 500, dampening = 30 })
 hl.curve("special", { type = "spring", mass = 1, stiffness = 700, dampening = 35 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 5, spring = "easy" })
 hl.animation({ leaf = "border", enabled = true, speed = 1, spring = "easy" })
+
 hl.animation({ leaf = "windows", enabled = true, speed = 1, spring = "fast" })
 hl.animation({ leaf = "windowsIn", enabled = true, speed = 1, spring = "pop" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1, bezier = "quick" })
-hl.animation({ leaf = "windowsMove", enabled = true, speed = 1, spring = "pop" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 1.5, bezier = "quick" })
+
 hl.animation({ leaf = "fade", enabled = true, speed = 0.7, bezier = "quick" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
 hl.animation({ leaf = "layers", enabled = true, speed = 3.81, bezier = "easeOutQuint" })
 hl.animation({ leaf = "fadeLayersIn", enabled = true, speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true, speed = 1.39, bezier = "almostLinear" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 1, spring = "fast" })
-hl.animation({ leaf = "specialWorkspaceIn", enabled = true, speed = 1, spring = "special", style = "slide bottom" })
-hl.animation({ leaf = "specialWorkspaceOut", enabled = true, speed = 1.5, bezier = "quick", style = "slide top" })
+
+hl.animation({ leaf = "workspaces", enabled = true, speed = 1.5, bezier = "quick", style = "slidevert" })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })

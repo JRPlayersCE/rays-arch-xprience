@@ -3,12 +3,7 @@
   "position": "top",
   "height": 30,
   "spacing": 0,
-  "modules-left": [
-    "hyprland/workspaces",
-    "custom/separator",
-    "custom/cava",
-    "hyprland/window",
-  ],
+  "modules-left": ["custom/separator", "custom/cava", "hyprland/window"],
   "modules-center": ["clock"],
   "modules-right": [
     "pulseaudio",
@@ -22,7 +17,6 @@
     "battery",
     "tray",
     "custom/separator",
-    "custom/power",
   ],
   "hyprland/workspaces": {
     "format": "{icon}",
