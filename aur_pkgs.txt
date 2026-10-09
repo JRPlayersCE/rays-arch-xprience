@@ -2,4 +2,4 @@ waypaper
 arronax
 everforest-gtk-theme-git
 everforest-icon-theme-git
-helium-browser-bin
+rokit-bin

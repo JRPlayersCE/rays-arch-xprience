@@ -6,70 +6,70 @@ hl.env("HYPRCURSOR_THEME", "everforest-cursors")
 hl.env("HYPRCURSOR_SIZE", "24")
 
 local everforest = {
-	bg_dim = "rgba(1e2326ff)",
-	bg0 = "rgba(272e33ff)",
-	bg1 = "rgba(2e383eff)",
-	bg_inactive = "rgba(4c555baa)", -- Cinza/Verde escuro para bordas inativas
-	shadow = "rgba(1e2326ee)", -- Cor de sombra baseada no bg_dim
-	green = "rgba(a7c080ee)", -- Cor ativa principal
-	aqua = "rgba(83c092ee)", -- Cor ativa secundária
-	blue = "rgba(7fbbb3ee)",
+    bg_dim = "rgba(1e2326ff)",
+    bg0 = "rgba(272e33ff)",
+    bg1 = "rgba(2e383eff)",
+    bg_inactive = "rgba(4c555baa)", -- Cinza/Verde escuro para bordas inativas
+    shadow = "rgba(1e2326ee)",      -- Cor de sombra baseada no bg_dim
+    green = "rgba(a7c080ee)",       -- Cor ativa principal
+    aqua = "rgba(83c092ee)",        -- Cor ativa secundária
+    blue = "rgba(7fbbb3ee)",
 }
 
 hl.config({
-	general = {
-		gaps_in = 10,
-		gaps_out = 15,
+    general = {
+        gaps_in = 10,
+        gaps_out = 15,
 
-		border_size = 2,
+        border_size = 2,
 
-		col = {
-			-- Gradiente entre o Verde e Aqua do Everforest para a janela ativa
-			active_border = { colors = { everforest.green, everforest.aqua }, angle = 45 },
-			-- Cor suave para janelas inativas
-			inactive_border = everforest.bg_inactive,
-		},
+        col = {
+            -- Gradiente entre o Verde e Aqua do Everforest para a janela ativa
+            active_border = { colors = { everforest.green, everforest.aqua }, angle = 45 },
+            -- Cor suave para janelas inativas
+            inactive_border = everforest.bg_inactive,
+        },
 
-		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
-		resize_on_border = false,
+        -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
+        resize_on_border = false,
 
-		-- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-		allow_tearing = false,
+        -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
+        allow_tearing = false,
 
-		layout = "dwindle",
-	},
+        layout = "dwindle",
+    },
 
-	decoration = {
-		rounding = 10,
-		rounding_power = 10,
+    decoration = {
+        rounding = 10,
+        rounding_power = 10,
 
-		-- Transparency ajustada para o estilo suave do Everforest
-		active_opacity = 1.0,
-		inactive_opacity = 0.8,
+        -- Transparency ajustada para o estilo suave do Everforest
+        active_opacity = 1.0,
+        inactive_opacity = 0.8,
 
-		shadow = {
-			enabled = true,
-			range = 20,
-			render_power = 4,
-			color = everforest.shadow,
-		},
+        shadow = {
+            enabled = true,
+            range = 20,
+            render_power = 4,
+            color = everforest.shadow,
+        },
 
-		motion_blur = {
-			enabled = true,
-			samples = 3,
-		},
+        motion_blur = {
+            enabled = true,
+            samples = 3,
+        },
 
-		blur = {
-			enabled = true,
-			size = 7,
-			passes = 1,
-			new_optimizations = true,
-		},
-	},
+        blur = {
+            enabled = true,
+            size = 7,
+            passes = 1,
+            new_optimizations = true,
+        },
+    },
 
-	animations = {
-		enabled = true,
-	},
+    animations = {
+        enabled = true,
+    },
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
