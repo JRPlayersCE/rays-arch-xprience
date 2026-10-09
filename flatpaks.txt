@@ -2,3 +2,4 @@ org.vinegarhq.Sober
 org.vinegarhq.Vinegar
 com.github.tchx84.Flatseal
 app.zen_browser.zen
+com.ktechpit.whatsie
