@@ -1,8 +1,8 @@
 [global]
-    # Certifique-se de que a linha abaixo esteja na seção [global]
     corner_radius = 8
-    font = Sans 10
+    font = JetBrainsMono Nerd Font 10
     frame_width = 2
+    origin = bottom-right
 
 [urgency_low]
     background = "#2f383e"
