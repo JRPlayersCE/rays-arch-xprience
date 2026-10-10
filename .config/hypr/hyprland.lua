@@ -64,6 +64,7 @@ hl.config({
         preserve_split = true,
     },
     scrolling = {
+        fullscreen_on_one_column = true,
         focus_fit_method = 0,
     },
 
